@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import User from "../db/model.js";
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import jwt from "jsonwebtoken";
 
 const signup = async (req, res) => {
