@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser";
 import cors from 'cors'
 import bodyParser from "body-parser";
 const app = express();
-const Port = 5000;
+const Port =process.env.Port;
 
 dotenv.config();
 app.use(cors({
