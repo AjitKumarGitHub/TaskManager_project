@@ -14,7 +14,7 @@ const TaskCmp = ({ project }) => {
         // Update the task in the database
         const token = Cookies.get('token');
         try {
-            const res = await axios.put(`http://localhost:5000/api/task/updatetask/${updatedTask._id}`, updatedTask, {
+            const res = await axios.put(`https://taskmanager-project-0iuh.onrender.com/task/updatetask/${updatedTask._id}`, updatedTask, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -35,7 +35,7 @@ const TaskCmp = ({ project }) => {
     const deleteTask = async (id) => {
         const token = Cookies.get('token');
         try {
-            await axios.delete(`http://localhost:5000/api/task/deletetask/${id}`, {
+            await axios.delete(`https://taskmanager-project-0iuh.onrender.com/task/deletetask/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

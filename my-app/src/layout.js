@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
      
     const LogOutHandler= async()=>{
       const csrfToken = Cookies.get('csrfToken');
-        const res= await axios.post(`http://localhost:5000/api/users/logout`,{},{
+        const res= await axios.post(`https://taskmanager-project-0iuh.onrender.com/users/logout`,{},{
           headers:{
             'X-CSRF-Token': csrfToken,
           },

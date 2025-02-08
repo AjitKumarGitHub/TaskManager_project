@@ -53,7 +53,7 @@ const getALLTasks = async () => {
   const token = Cookies.get('token'); // Get the token from cookies
   // console.log("JWT Token:", token); // Log the token
   try {
-    const res = await axios.get('http://localhost:5000/api/task/gettasks', {
+    const res = await axios.get('https://taskmanager-project-0iuh.onrender.com/task/gettasks', {
       headers: {
         'Authorization': `Bearer ${token}`, // Include the token in the headers
       },

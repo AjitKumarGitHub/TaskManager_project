@@ -5,7 +5,7 @@ const Logout = () => {
   const Navigate=useNavigate()
     
     const handler= async()=>{
-        const res= await axios.post(`http://localhost:5000/api/users/login`)
+        const res= await axios.post(`https://taskmanager-project-0iuh.onrender.com/users/login`)
         if(res.status===2000){
            alert('Successfully Logout')
            Navigate('/signup')

@@ -18,7 +18,7 @@ const Profile = () => {
        const userId = decoded.id; // Assuming the user ID is stored in the token
       //  console.log(userId);
       try {
-        const res = await axios.get(`http://localhost:5000/api/users/userData/${userId}`,{
+        const res = await axios.get(`https://taskmanager-project-0iuh.onrender.com/users/userData/${userId}`,{
           headers: {
             Authorization: `Bearer ${token}`,
           },

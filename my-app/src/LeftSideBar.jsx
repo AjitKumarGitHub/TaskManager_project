@@ -9,7 +9,7 @@ const LeftSideBar = () => {
 
   const handleLogout = async () => {
     try {
-      const request = await axios.post(`http://localhost:5000/api/users/logout`);
+      const request = await axios.post(`https://taskmanager-project-0iuh.onrender.com/users/logout`);
       if (request.status === 200) {
         Cookies.remove('token');
         navigate('/login');

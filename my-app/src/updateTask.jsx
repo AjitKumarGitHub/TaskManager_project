@@ -27,7 +27,7 @@ const UpdateTask = ({ onClose, onAddTask, editedTask }) => {
     // Update the task in the database
     const token = Cookies.get('token');
     try {
-      const res = await axios.put(`http://localhost:5000/api/task/updatetask/${updatedTask._id}`, updatedTask, {
+      const res = await axios.put(`https://taskmanager-project-0iuh.onrender.com/task/updatetask/${updatedTask._id}`, updatedTask, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
