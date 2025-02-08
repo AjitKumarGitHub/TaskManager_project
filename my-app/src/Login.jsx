@@ -3,11 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { toast } from 'react-toastify';
-import { useAuth } from './AuthContext'; // Import useAuth
+import { useAuth } from './AuthContext';  
 
 const Login = () => {
   const navigate = useNavigate();
-  const { login } = useAuth(); // Get the login function from AuthContext
+  const { login } = useAuth();  
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
@@ -22,11 +22,11 @@ const Login = () => {
       });
       console.log(res.data);
 
-      const token = res.data.token; // Adjust based on your API response structure
+      const token = res.data.token;  
 
       if (res.data.success) {
-        Cookies.set('token', token, { expires: 1 }); // Set the token in cookies
-        login(token); // Update authentication state
+        Cookies.set('token', token, { expires: 1 });  
+        login(token);  
         console.log('Token stored:', token);
         navigate('/'); 
         toast.success(res.data.message);

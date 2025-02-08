@@ -15,15 +15,15 @@ const Profile = () => {
     const token = Cookies.get('token');
     if (token) {
        const decoded = jwtDecode(token);
-       const userId = decoded.id; // Assuming the user ID is stored in the token
-      //  console.log(userId);
+       const userId = decoded.id;  
+       
       try {
         const res = await axios.get(`https://taskmanager-project-0iuh.onrender.com/users/userData/${userId}`,{
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
-        // console.log(res.data);
+         
         
         setUser(res.data);
       } catch (error) {

@@ -20,11 +20,8 @@ const UpdateTask = ({ onClose, onAddTask, editedTask }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const updatedTask = { title, description, date, status, _id: editedTask._id };
-    console.log("Submitting Updated Task:", updatedTask); // Log the updated task
-    console.log("Status before API call:", status); // Log the status
-    console.log("Date before API call:", date); // Log the date
-
-    // Update the task in the database
+     
+    
     const token = Cookies.get('token');
     try {
       const res = await axios.put(`https://taskmanager-project-0iuh.onrender.com/task/updatetask/${updatedTask._id}`, updatedTask, {
@@ -33,7 +30,7 @@ const UpdateTask = ({ onClose, onAddTask, editedTask }) => {
         }
       });
       console.log("Task updated in database:", res.data);
-      onAddTask(updatedTask); // Call onAddTask to update local state
+      onAddTask(updatedTask); 
     } catch (error) {
       console.error("Error updating task:", error.response ? error.response.data : error.message);
     }
@@ -60,7 +57,7 @@ const UpdateTask = ({ onClose, onAddTask, editedTask }) => {
             <label className="block text-sm font-semibold mb-1">Description</label>
             <textarea
               value={description}
-              onChange={(e) => setDescription(e.target.value)}
+                  onChange={(e) => setDescription(e.target.value)}
               className="w-full p-2 border border-gray-300 rounded-lg"
               required
             />

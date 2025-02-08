@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TaskCmp from './taskCmp';
 import AddTask from './addtask';
 import axios from 'axios';
-import Cookies from 'js-cookie'; // Import js-cookie to handle cookies
+import Cookies from 'js-cookie';  
 
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,31 +13,30 @@ const Dashboard = () => {
   }, []);
 
   const getALLTasks = async () => {
-    const token = Cookies.get('token'); // Get the token from cookies
-    // console.log("JWT Token:", token); // Log the token
+    const token = Cookies.get('token');  
     try {
       const res = await axios.get('https://taskmanager-project-0iuh.onrender.com/task/gettasks', {
         headers: {
-          'Authorization': `Bearer ${token}`, // Include the token in the headers
+          'Authorization': `Bearer ${token}`,  
         },
       });
       setTasks(res.data);
-      // console.log(res.data);
+     
     } catch (error) {
       console.log(error);
     }
   };
 
   const handleAddTask = async (newTask) => {
-    const token = Cookies.get('token'); // Get the token from cookies
-    //console.log("JWT Token:", token); // Log the token
+    const token = Cookies.get('token');  
+     
     try {
       const res = await axios.post('https://taskmanager-project-0iuh.onrender.com/task/addtask', newTask, {
         headers: {
-          'Authorization': `Bearer ${token}`, // Include the token in the headers
+          'Authorization': `Bearer ${token}`, 
         },
       });
-      //console.log(res.data);
+       
       getALLTasks();
     } catch (error) {
       console.error('Error adding task:', error.response.data);

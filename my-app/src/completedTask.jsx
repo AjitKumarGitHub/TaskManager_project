@@ -50,17 +50,17 @@ useEffect(()=>{
   getALLTasks()
 },[])
 const getALLTasks = async () => {
-  const token = Cookies.get('token'); // Get the token from cookies
-  // console.log("JWT Token:", token); // Log the token
+  const token = Cookies.get('token'); 
+  
   try {
     const res = await axios.get('https://taskmanager-project-0iuh.onrender.com/task/gettasks', {
       headers: {
-        'Authorization': `Bearer ${token}`, // Include the token in the headers
+        'Authorization': `Bearer ${token}`,  
       },
     });
     const filteredTask=res.data.filter((task)=> task.status==='complete');
     setTasks(filteredTask)
-    // console.log(tasks);
+   
   } catch (error) {
     console.log(error);
   }

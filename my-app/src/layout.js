@@ -1,11 +1,11 @@
 import React from 'react';
-import NavLinkUrl from './NavLink';
+ 
  
 import {useNavigate,Outlet} from 'react-router-dom';
  
 import axios from 'axios'
 import Cookies from 'js-cookie'
-import Welcome from './welcome';
+ 
 const Layout = ({ children }) => {
 
     const Navigate=useNavigate()
@@ -33,12 +33,11 @@ const Layout = ({ children }) => {
     return (
         <div className="layout">
             <div className='ml-[40%]'>
-              {/* <NavLinkUrl/> */}
-              {/* <Welcome/> */}
+              
             </div>
              
             <main className="main-content">
-                {/* {children}  */}
+               
               
                   
             </main>

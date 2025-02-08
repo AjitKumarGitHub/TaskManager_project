@@ -11,7 +11,7 @@ const TaskCmp = ({ project }) => {
     const onAddTask = async (updatedTask) => {
         console.log("Updated Task:", updatedTask);
         
-        // Update the task in the database
+        
         const token = Cookies.get('token');
         try {
             const res = await axios.put(`https://taskmanager-project-0iuh.onrender.com/task/updatetask/${updatedTask._id}`, updatedTask, {
@@ -21,8 +21,8 @@ const TaskCmp = ({ project }) => {
             });
             console.log("Task updated in database:", res.data);
             
-            // Update local state
-            setLocalProject(updatedTask); // Update localProject with the updated task
+            
+            setLocalProject(updatedTask);  
             const updatedTasks = taskddata.map(task => 
                 task._id === updatedTask._id ? updatedTask : task
             );
@@ -41,7 +41,7 @@ const TaskCmp = ({ project }) => {
                 }
             });
             console.log("Task deleted from database");
-            // Update local state to remove the deleted task
+           
             setTaskdata(taskddata.filter(task => task._id !== id));
         } catch (error) {
             console.error("Error deleting task:", error);
@@ -76,7 +76,7 @@ const TaskCmp = ({ project }) => {
                 <div className="flex justify-between mt-4">
                     <button onClick={() => {
                         setIsModalOpen(true);
-                        setLocalProject(project); // Set the current project data for editing
+                        setLocalProject(project);  
                         console.log("Editing Project:", project);
                     }} 
                         className="bg-blue-500 text-white px-4 py-2 rounded-lg mb-4"

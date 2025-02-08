@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Signup from './Signup';
-import Home from './Home'; // Import the Home component
+import Home from './Home';  
 import Login from './Login';
 import Layout from './layout';
 import Profile from './Profile';
@@ -10,8 +10,8 @@ import LeftSideBar from './LeftSideBar';
 import CompletedTask from './completedTask';
 import NavLinkUrl from './NavLink';
 import Settings from './setting';
-import { AuthProvider } from './AuthContext'; // Import AuthProvider
-import ProtectedRoute from './ProtectedRoute'; // Import ProtectedRoute
+import { AuthProvider } from './AuthContext';  
+import ProtectedRoute from './ProtectedRoute';  
 
 function App() {
   return (
