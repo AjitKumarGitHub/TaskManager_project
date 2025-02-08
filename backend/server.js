@@ -11,7 +11,7 @@ const Port =process.env.Port;
 
 dotenv.config();
 app.use(cors({
-    origin: 'http://localhost:3000', // Adjust this to your frontend's URL
+    origin: 'https://selftaskmanage.vercel.app', // Adjust this to your frontend's URL
     credentials: true // If you need to send cookies or authorization headers
 }));
 app.use(bodyParser.json())
