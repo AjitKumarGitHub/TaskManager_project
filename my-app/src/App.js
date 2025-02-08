@@ -20,7 +20,7 @@ function App() {
         <NavLinkUrl />
         <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<Home />} /> // Set Home as the landing page
+            <Route index element={<Home />} />  
             <Route path='dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path='profile' element={<ProtectedRoute><Profile /></ProtectedRoute>} />
             <Route path='completed' element={<CompletedTask />} />
