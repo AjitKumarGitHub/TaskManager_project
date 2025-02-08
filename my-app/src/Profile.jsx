@@ -42,7 +42,7 @@ const Profile = () => {
       {/* Avatar Section */}
       <div className="flex items-center justify-center p-4 bg-gray-200">
         <img
-          src={avatar || 'https://via.placeholder.com/150'} // Placeholder image if no avatar
+          src={avatar || 'https://via.placeholder.com/150'} 
           alt="Avatar"
           className="w-24 h-24 rounded-full border-2 border-gray-300"
         />

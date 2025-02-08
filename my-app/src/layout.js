@@ -1,35 +1,8 @@
 import React from 'react';
- 
- 
-import {useNavigate,Outlet} from 'react-router-dom';
- 
-import axios from 'axios'
-import Cookies from 'js-cookie'
- 
+import { Outlet } from 'react-router-dom';
+
 const Layout = ({ children }) => {
-
-    const Navigate=useNavigate()
-     
-    const LogOutHandler= async()=>{
-      const csrfToken = Cookies.get('csrfToken');
-        const res= await axios.post(`https://taskmanager-project-0iuh.onrender.com/users/logout`,{},{
-          headers:{
-            'X-CSRF-Token': csrfToken,
-          },
-        })
-        console.log(res)
-        Cookies.remove('access_token')
-        if(res.status===200){
-           alert('Successfully Logout')
-           
-          
-           Navigate('/login')
-        }
-      }
-
-
-
-
+ 
     return (
         <div className="layout">
             <div className='ml-[40%]'>
