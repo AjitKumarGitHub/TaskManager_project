@@ -16,7 +16,7 @@ const getALLTasks = async () => {
   const token = Cookies.get('token'); 
   
   try {
-    const res = await axios.get('https://taskmanager-project-0iuh.onrender.com/task/gettasks', {
+    const res = await axios.get('https://taskmanager-project-0iuh.onrender.com/api/task/gettasks', {
       headers: {
         'Authorization': `Bearer ${token}`,  
       },
@@ -37,7 +37,7 @@ const getALLTasks = async () => {
         <header className="flex items-center justify-between mb-4">
           <h2 className="text-3xl font-semibold text-gray-800">Completed Task</h2>
           <button className="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700">
-            delete Task
+             View Task
           </button>
         </header>
 

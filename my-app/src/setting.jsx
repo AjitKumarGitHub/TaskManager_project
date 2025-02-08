@@ -19,7 +19,7 @@ const Settings = () => {
       console.log(id);
 
       try {
-        const res = await axios.put(`https://taskmanager-project-0iuh.onrender.com/users/updateUser/${id}`, { username, email, password }, {
+        const res = await axios.put(`https://taskmanager-project-0iuh.onrender.com/api/users/updateUser/${id}`, { username, email, password }, {
           headers: {
             Authorization: `Bearer ${token}`
           }

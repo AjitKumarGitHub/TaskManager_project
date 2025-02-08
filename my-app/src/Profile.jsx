@@ -18,7 +18,8 @@ const Profile = () => {
        const userId = decoded.id;  
        
       try {
-        const res = await axios.get(`https://taskmanager-project-0iuh.onrender.com/users/userData/${userId}`,{
+        const res = await axios.get(`https://taskmanager-project-0iuh.onrender.com/api/users/userData/${userId}`, {
+
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -54,9 +55,9 @@ const Profile = () => {
         <p className="text-gray-600 text-2xl">{user.username}</p>
         <p className="text-gray-600 text-2xl">{user.email}</p>
         <p className="text-gray-600 text-2xl">Student</p>
-        <p className="text-gray-600 text-2xl">NIT Srinagar</p>
-        <p className="text-gray-600 text-2xl">Madhubani</p>
-        <p className="text-gray-600 text-2xl">Bihar</p>
+        <p className="text-gray-600 text-2xl">College Name</p>
+        <p className="text-gray-600 text-2xl">District</p>
+        <p className="text-gray-600 text-2xl">State</p>
       </div>
       <Outlet />
     </div>

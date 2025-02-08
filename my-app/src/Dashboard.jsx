@@ -15,7 +15,7 @@ const Dashboard = () => {
   const getALLTasks = async () => {
     const token = Cookies.get('token');  
     try {
-      const res = await axios.get('https://taskmanager-project-0iuh.onrender.com/task/gettasks', {
+      const res = await axios.get('https://taskmanager-project-0iuh.onrender.com/api/task/gettasks', {
         headers: {
           'Authorization': `Bearer ${token}`,  
         },
@@ -31,7 +31,7 @@ const Dashboard = () => {
     const token = Cookies.get('token');  
      
     try {
-       await axios.post('https://taskmanager-project-0iuh.onrender.com/task/addtask', newTask, {
+       await axios.post('https://taskmanager-project-0iuh.onrender.com/api/task/addtask', newTask, {
         headers: {
           'Authorization': `Bearer ${token}`, 
         },

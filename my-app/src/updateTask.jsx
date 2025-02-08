@@ -24,7 +24,7 @@ const UpdateTask = ({ onClose, onAddTask, editedTask }) => {
     
     const token = Cookies.get('token');
     try {
-      const res = await axios.put(`https://taskmanager-project-0iuh.onrender.com/task/updatetask/${updatedTask._id}`, updatedTask, {
+      const res = await axios.put(`https://taskmanager-project-0iuh.onrender.com/api/task/updatetask/${updatedTask._id}`, updatedTask, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

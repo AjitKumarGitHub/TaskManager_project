@@ -14,7 +14,7 @@ const TaskCmp = ({ project }) => {
         
         const token = Cookies.get('token');
         try {
-            const res = await axios.put(`https://taskmanager-project-0iuh.onrender.com/task/updatetask/${updatedTask._id}`, updatedTask, {
+            const res = await axios.put(`https://taskmanager-project-0iuh.onrender.com/api/task/updatetask/${updatedTask._id}`, updatedTask, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -35,7 +35,7 @@ const TaskCmp = ({ project }) => {
     const deleteTask = async (id) => {
         const token = Cookies.get('token');
         try {
-            await axios.delete(`https://taskmanager-project-0iuh.onrender.com/task/deletetask/${id}`, {
+            await axios.delete(`https://taskmanager-project-0iuh.onrender.com/api/task/deletetask/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

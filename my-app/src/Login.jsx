@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Cookies from 'js-cookie';
+import Cookies from 'js-cookie'; // Import js-cookie to handle cookies
 import { toast } from 'react-toastify';
 import { useAuth } from './AuthContext';  
 
@@ -15,7 +15,7 @@ const Login = () => {
   const handler = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`https://taskmanager-project-0iuh.onrender.com/users/login`, {
+      const res = await axios.post(`https://taskmanager-project-0iuh.onrender.com/api/users/login`, {
         username,
         email,
         password: pwd,

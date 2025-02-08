@@ -14,7 +14,7 @@ const Signup = () => {
   const handler = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`https://taskmanager-project-0iuh.onrender.com/users/signup`, {
+      const res = await axios.post(`https://taskmanager-project-0iuh.onrender.com/api/users/signup`, {
         firstname: fname,
         lastname: lName,
         username,
