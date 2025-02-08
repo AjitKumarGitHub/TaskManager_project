@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Cookies from 'js-cookie'; // Import js-cookie to handle cookies
+import Cookies from 'js-cookie';
 import { toast } from 'react-toastify';
+import { useAuth } from './AuthContext'; // Import useAuth
 
 const Login = () => {
   const navigate = useNavigate();
+  const { login } = useAuth(); // Get the login function from AuthContext
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
@@ -19,21 +21,18 @@ const Login = () => {
         password: pwd,
       });
       console.log(res.data);
-      
 
       const token = res.data.token; // Adjust based on your API response structure
 
-      Cookies.set('token', token, { expires: 1 }); // Set the token in cookies
-      console.log('Token stored:', token);
-      navigate('/');
-      console.log("Login Response:", res); // Log the entire response object
-
       if (res.data.success) {
+        Cookies.set('token', token, { expires: 1 }); // Set the token in cookies
+        login(token); // Update authentication state
+        console.log('Token stored:', token);
+        navigate('/'); 
         toast.success(res.data.message);
         setUserName("");
         setEmail("");
         setPwd("");
-        navigate('/'); // Navigate to home URL
       }
     } catch (error) {
       toast.error("Try again");
