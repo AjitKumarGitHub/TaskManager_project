@@ -29,7 +29,7 @@ const getALLTasks = async () => {
   }
 };
   return (
-    <div className="flex shadow-lg h-auto bg-gray-100 md:mt-10 mt-[90%] w-full md:w-[80%] md:ml-[18%] absolute">
+    <div className="flex shadow-lg h-auto bg-gray-100 md:mt-10 mt-[80%] w-full md:w-[80%] md:ml-[18%] absolute">
       
 
       {/* Main Content */}

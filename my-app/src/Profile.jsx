@@ -39,7 +39,7 @@ const Profile = () => {
 
   const avatar='https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?semt=ais_hybrid';
   return (
-    <div className="max-w-md mx-auto pt-5 bg-white shadow-lg rounded-lg overflow-hidden ml-1 md:mt-[10%] mt-[90%] md:w-[80%] w-[100%] md:ml-[50%] mx-2 absolute">
+    <div className="max-w-md mx-auto pt-5 bg-white shadow-lg rounded-lg overflow-hidden ml-1 md:mt-[10%] mt-[80%] md:w-[80%] w-[100%] md:ml-[50%] mx-2 absolute">
       {/* Avatar Section */}
       <div className="flex items-center justify-center p-4 bg-gray-200">
         <img

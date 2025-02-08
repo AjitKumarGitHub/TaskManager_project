@@ -40,7 +40,7 @@ const Settings = () => {
   };
 
   return (
-    <div className="max-w-lg md:mt-[10%] mt-[90%] md:w-[80%] w-full md:ml-[35%] p-6 border border-gray-300 rounded-lg shadow-lg absolute">
+    <div className="max-w-lg md:mt-[10%] mt-[80%] md:w-[80%] w-full md:ml-[35%] p-6 border border-gray-300 rounded-lg shadow-lg absolute">
       <h2 className="text-2xl font-bold mb-4">Settings</h2>
       <form onSubmit={handleSave}>
         <div className="mb-4">

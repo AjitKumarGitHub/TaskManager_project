@@ -45,7 +45,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex shadow-lg h-auto bg-gray-100  md:mt-10 mt-[90%]  md:w-[80%] w-full md:ml-[18%] absolute">
+    <div className="flex shadow-lg h-auto bg-gray-100  md:mt-10 mt-[80%]  md:w-[80%] w-full md:ml-[18%] absolute">
       {/* Main Content */}
       <div className="flex-1 p-6 w-full">
         <header className="flex items-center justify-between mb-4">
