@@ -1,10 +1,15 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(!!Cookies.get('token'));
+
+    useEffect(() => {
+        const token = Cookies.get('token');
+        setIsAuthenticated(!!token);
+    }, []);
 
     const login = (token) => {
         Cookies.set('token', token, { expires: 1 });
