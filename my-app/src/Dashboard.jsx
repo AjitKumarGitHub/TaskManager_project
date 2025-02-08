@@ -31,11 +31,12 @@ const Dashboard = () => {
     const token = Cookies.get('token');  
      
     try {
-      const res = await axios.post('https://taskmanager-project-0iuh.onrender.com/task/addtask', newTask, {
+       await axios.post('https://taskmanager-project-0iuh.onrender.com/task/addtask', newTask, {
         headers: {
           'Authorization': `Bearer ${token}`, 
         },
       });
+       
        
       getALLTasks();
     } catch (error) {

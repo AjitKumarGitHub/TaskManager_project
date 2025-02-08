@@ -7,44 +7,7 @@ import Cookies from 'js-cookie';
 const CompletedTask = () => {
 
   const [tasks, setTasks] = useState([]);
-//   const tasks = [{
-//     "title" :"Project Management Tool",
-//     "description":"This project management tool  nd reminders, users can stay updated on their tasks and deadlines.",
-//     "additionDate": "2023-10-01",
-//     "completedStatus": true,
-//     "incompleteStatus": false,
-//    }, 
-//    {
-//     "title" :"Project Management Tool",
-//     "description":"This project management tool  nd reminders, users can stay updated on their tasks and deadlines.",
-//     "additionDate": "2023-10-01",
-//     "completedStatus": true,
-//     "incompleteStatus": false,
-//    },
-//    {
-//     "title" :"Project Management Tool",
-//     "description":"This project management tool  nd reminders, users can stay updated on their tasks and deadlines.",
-//     "additionDate": "2023-10-01",
-//     "completedStatus": true,
-//     "incompleteStatus": false,
-//    },
-//    {
-//     "title" :"Project Management Tool",
-//     "description":"This project management tool  nd reminders, users can stay updated on their tasks and deadlines.",
-//     "additionDate": "2023-10-01",
-//     "completedStatus": true,
-//     "incompleteStatus": false,
-//    },
-//    {
-//     "title" :"Project Management Tool",
-//     "description":"This project management tool  nd reminders, users can stay updated on their tasks and deadlines.",
-//     "additionDate": "2023-10-01",
-//     "completedStatus": true,
-//     "incompleteStatus": false,
-//    }
-
-
-// ]
+ 
 
 useEffect(()=>{
   getALLTasks()

@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
             'X-CSRF-Token': csrfToken,
           },
         })
-
+        console.log(res)
         Cookies.remove('access_token')
         if(res.status===200){
            alert('Successfully Logout')
